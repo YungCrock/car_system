@@ -1,0 +1,22 @@
+<div class="container bg-light">
+    <h3>Cadastro de Carros:</h3>
+
+    <form #formCar="ngForm">
+        <div class="d-flex flex-row mb-3">
+          <label for="name" class="form-label me-1">Nome:</label>
+          <input type="text" class="form-control ms-5" [(ngModel)]="car.name" name="name" required>
+        </div>
+        <div class="d-flex flex-row mb-3">
+          <label for="automaker" class="form-label me-2">Montadora:</label>
+          <input type="text" class="form-control ms-2" [(ngModel)]="car.automaker" name="automaker" required>
+        </div>
+        <div class="d-flex flex-row mb-3">
+            <label for="price" class="form-label me-2">Preço:</label>
+            <input type="text" class="form-control ms-5" [(ngModel)]="car.price" name="price" required>
+            <label for="year" class="form-label ms-3">Ano:</label>
+            <input type="text" class="form-control ms-5" [(ngModel)]="car.year" name="year" required>
+          </div>
+        
+        <button class="btn btn-primary" (click)="save()" [disabled]="formCar.invalid">Salvar</button>
+      </form>
+</div>
